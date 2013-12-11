@@ -1,35 +1,16 @@
 package cn.ac.iscas.appinsight.api;
 
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
+import android.content.Context;
 import cn.ac.iscas.appinsight.api.connectionqueue.ConnectionQueue;
 import cn.ac.iscas.appinsight.api.eventqueue.EventQueue;
 import cn.ac.iscas.appinsight.api.udid.OpenUDID_manager;
 
-import android.content.Context;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.telephony.TelephonyManager;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
-import android.view.WindowManager;
-
-public class Countly
-{
-	private static Countly sharedInstance_;
+public class AppInsight {
+	private static AppInsight sharedInstance_;
 	private Timer timer_;
 	private ConnectionQueue queue_;
 	private EventQueue eventQueue_;
@@ -37,15 +18,15 @@ public class Countly
 	private double unsentSessionLength_;
 	private double lastTime_;
 
-	static public Countly sharedInstance()
+	static public AppInsight sharedInstance()
 	{
 		if (sharedInstance_ == null)
-			sharedInstance_ = new Countly();
+			sharedInstance_ = new AppInsight();
 		
 		return sharedInstance_;
 	}
 	
-	private Countly()
+	private AppInsight()
 	{
 		queue_ = new ConnectionQueue();
 		eventQueue_ = new EventQueue();

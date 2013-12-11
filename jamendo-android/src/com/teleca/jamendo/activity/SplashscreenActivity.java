@@ -15,7 +15,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
 
-import cn.ac.iscas.appinsight.api.Countly;
+import cn.ac.iscas.appinsight.api.AppInsight;
 
 import com.teleca.jamendo.R;
 import com.teleca.jamendo.dialog.TutorialDialog;
@@ -70,7 +70,7 @@ public class SplashscreenActivity extends Activity {
 
 		showTutorial();
 		
-		Countly.sharedInstance().init(getApplicationContext(),
+		AppInsight.sharedInstance().init(getApplicationContext(),
 				"https://cloud.count.ly", "e3d59d09fec482beea32493148850b18cbfd3082");
 		
 	}
@@ -105,7 +105,7 @@ public class SplashscreenActivity extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		Countly.sharedInstance().onStart();
+		AppInsight.sharedInstance().onStart();
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class SplashscreenActivity extends Activity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		Countly.sharedInstance().onStop();
+		AppInsight.sharedInstance().onStop();
 	}
 	
 	
