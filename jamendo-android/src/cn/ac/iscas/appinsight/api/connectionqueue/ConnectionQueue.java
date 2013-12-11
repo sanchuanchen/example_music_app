@@ -1,15 +1,16 @@
-package ly.count.android.api.connectionqueue;
+package cn.ac.iscas.appinsight.api.connectionqueue;
 
 import java.io.InputStream;
 import java.net.URI;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import ly.count.android.api.deviceinfo.DeviceInfo;
 
-import org.OpenUDID.OpenUDID_manager;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+
+import cn.ac.iscas.appinsight.api.deviceinfo.DeviceInfo;
+import cn.ac.iscas.appinsight.api.udid.OpenUDID_manager;
 
 import android.content.Context;
 import android.util.Log;

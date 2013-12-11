@@ -3,7 +3,6 @@
  */
 package com.teleca.jamendo.activity;
 
-import ly.count.android.api.Countly;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -15,6 +14,8 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
+
+import cn.ac.iscas.appinsight.api.Countly;
 
 import com.teleca.jamendo.R;
 import com.teleca.jamendo.dialog.TutorialDialog;

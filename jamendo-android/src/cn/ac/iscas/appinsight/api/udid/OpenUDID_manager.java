@@ -1,4 +1,4 @@
-package org.OpenUDID;
+package cn.ac.iscas.appinsight.api.udid;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;

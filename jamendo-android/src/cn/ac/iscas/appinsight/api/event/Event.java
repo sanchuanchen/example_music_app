@@ -1,4 +1,4 @@
-package ly.count.android.api.event;
+package cn.ac.iscas.appinsight.api.event;
 
 import java.util.Map;
 

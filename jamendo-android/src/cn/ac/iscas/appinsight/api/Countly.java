@@ -1,4 +1,4 @@
-package ly.count.android.api;
+package cn.ac.iscas.appinsight.api;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -10,13 +10,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import ly.count.android.api.connectionqueue.ConnectionQueue;
-import ly.count.android.api.eventqueue.EventQueue;
 
-import org.OpenUDID.OpenUDID_manager;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+
+import cn.ac.iscas.appinsight.api.connectionqueue.ConnectionQueue;
+import cn.ac.iscas.appinsight.api.eventqueue.EventQueue;
+import cn.ac.iscas.appinsight.api.udid.OpenUDID_manager;
 
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;

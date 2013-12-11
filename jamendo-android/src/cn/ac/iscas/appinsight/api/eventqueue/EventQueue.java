@@ -1,10 +1,11 @@
-package ly.count.android.api.eventqueue;
+package cn.ac.iscas.appinsight.api.eventqueue;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Map;
 
-import ly.count.android.api.event.Event;
+import cn.ac.iscas.appinsight.api.event.Event;
+
 
 public class EventQueue {
 	private ArrayList<Event> events_;

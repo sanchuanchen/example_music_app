@@ -1,9 +1,9 @@
-package ly.count.android.api.deviceinfo;
+package cn.ac.iscas.appinsight.api.deviceinfo;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
-import org.OpenUDID.OpenUDID_manager;
+import cn.ac.iscas.appinsight.api.udid.OpenUDID_manager;
 
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
