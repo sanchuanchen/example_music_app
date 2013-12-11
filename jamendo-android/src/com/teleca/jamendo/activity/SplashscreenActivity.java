@@ -3,6 +3,7 @@
  */
 package com.teleca.jamendo.activity;
 
+import ly.count.android.api.Countly;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -67,6 +68,10 @@ public class SplashscreenActivity extends Activity {
 		});
 
 		showTutorial();
+		
+		Countly.sharedInstance().init(getApplicationContext(),
+				"https://cloud.count.ly", "51a22bd42a74fdea68000031");
+		
 	}
 	
 	final void showTutorial() {
@@ -92,4 +97,28 @@ public class SplashscreenActivity extends Activity {
 			endAnimationHandler.postDelayed(endAnimationRunnable, 1500);
 		}
 	}
+
+	/**
+	 * @author sanchuan
+	 */
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Countly.sharedInstance().onStart();
+	}
+
+	/**
+	 * @author sanchuan
+	 */
+	@Override
+	protected void onStop() {
+		super.onStop();
+		Countly.sharedInstance().onStop();
+	}
+	
+	
+	
+	
+	
+	
 }
