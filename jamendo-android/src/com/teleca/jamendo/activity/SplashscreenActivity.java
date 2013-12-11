@@ -70,7 +70,7 @@ public class SplashscreenActivity extends Activity {
 		showTutorial();
 		
 		Countly.sharedInstance().init(getApplicationContext(),
-				"https://cloud.count.ly", "51a22bd42a74fdea68000031");
+				"https://cloud.count.ly", "e3d59d09fec482beea32493148850b18cbfd3082");
 		
 	}
 	
