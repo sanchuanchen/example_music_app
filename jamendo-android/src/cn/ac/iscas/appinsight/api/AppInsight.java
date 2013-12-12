@@ -5,6 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.content.Context;
+import android.util.Log;
 import cn.ac.iscas.appinsight.api.connectionqueue.ConnectionQueue;
 import cn.ac.iscas.appinsight.api.eventqueue.EventQueue;
 import cn.ac.iscas.appinsight.api.udid.OpenUDID_manager;
@@ -17,6 +18,7 @@ public class AppInsight {
 	private boolean isVisible_;
 	private double unsentSessionLength_;
 	private double lastTime_;
+	private boolean initialized;
 
 	static public AppInsight sharedInstance()
 	{
@@ -46,10 +48,15 @@ public class AppInsight {
 	
 	public void init(Context context, String serverURL, String appKey)
 	{
-		OpenUDID_manager.sync(context);
-		queue_.setContext(context);
-		queue_.setServerURL(serverURL);
-		queue_.setAppKey(appKey);
+		if(!initialized)
+		{
+			OpenUDID_manager.sync(context);
+			queue_.setContext(context);
+			queue_.setServerURL(serverURL);
+			queue_.setAppKey(appKey);
+			initialized = true;
+			Log.i("jamendo", "init executed......");
+		}
 	}
 
 	public void onStart()

@@ -72,7 +72,13 @@ public class SplashscreenActivity extends Activity {
 		
 		AppInsight.sharedInstance().init(getApplicationContext(),
 				"https://cloud.count.ly", "e3d59d09fec482beea32493148850b18cbfd3082");
+		/*
 		
+		
+		
+		
+		
+		*/
 	}
 	
 	final void showTutorial() {
